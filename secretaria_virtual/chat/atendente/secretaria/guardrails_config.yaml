@@ -1,0 +1,9 @@
+scope: |
+  Este assistente ajuda com assuntos acadêmicos.
+
+forbidden_topics:
+  - política
+  - religião
+
+out_of_scope_message: |
+  Posso ajudar apenas com assuntos acadêmicos.

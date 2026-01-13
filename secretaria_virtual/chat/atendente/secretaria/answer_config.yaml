@@ -1,0 +1,19 @@
+agent_name: "Answer Acadêmico"
+
+answers:
+  Matrícula: |
+    As matrículas ocorrem duas vezes ao ano.
+    O aluno deve acessar o portal acadêmico
+    dentro do período divulgado.
+
+  Trancamento: |
+    O trancamento pode ser solicitado
+    até a 8ª semana do semestre.
+
+  Documentos: |
+    Declarações e históricos são solicitados
+    via protocolo e entregues em até 5 dias úteis.
+
+  Calendário Acadêmico: |
+    O calendário acadêmico está disponível
+    no site oficial da instituição.

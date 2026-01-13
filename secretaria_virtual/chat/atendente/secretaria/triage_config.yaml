@@ -1,0 +1,19 @@
+agent_name: "Triage Acadêmico"
+
+keywords:
+  - agent: "Flow Agent"
+    keywords:
+      - "matrícula"
+      - "trancamento"
+      - "documento"
+      - "calendário"
+
+  - agent: "Feedback Agent"
+    keywords:
+      - "reclamação"
+      - "sugestão"
+
+  - agent: "Escalation Agent"
+    keywords:
+      - "falar com atendente"
+      - "humano"

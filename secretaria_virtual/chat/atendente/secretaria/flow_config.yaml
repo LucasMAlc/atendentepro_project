@@ -1,0 +1,18 @@
+agent_name: "Flow Acadêmico"
+
+topics:
+  - id: 1
+    label: "Matrícula"
+    keywords: ["matrícula", "ingresso"]
+
+  - id: 2
+    label: "Trancamento"
+    keywords: ["trancar", "trancamento"]
+
+  - id: 3
+    label: "Documentos"
+    keywords: ["histórico", "declaração"]
+
+  - id: 4
+    label: "Calendário Acadêmico"
+    keywords: ["calendário", "datas"]
