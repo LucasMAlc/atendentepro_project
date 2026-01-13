@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Secretaria Virtual</title>
+</head>
+<body>
+    <h2>Secretaria Virtual Acadêmica</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="message" placeholder="Digite sua dúvida" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    {% if response %}
+        <p><strong>Resposta:</strong> {{ response }}</p>
+    {% endif %}
+</body>
+</html>
