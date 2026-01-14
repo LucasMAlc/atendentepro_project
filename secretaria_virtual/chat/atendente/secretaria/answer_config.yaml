@@ -1,19 +1,64 @@
-agent_name: "Answer Acadêmico"
+agent_name: "Assistente de Respostas - Secretaria Virtual"
 
-answers:
-  Matrícula: |
-    As matrículas ocorrem duas vezes ao ano.
-    O aluno deve acessar o portal acadêmico
-    dentro do período divulgado.
+knowledge_base: |
+  # CALENDÁRIO ESCOLAR 2025
+  
+  ## 1º Semestre
+  - Início das aulas: 05/02/2025
+  - Carnaval (recesso): 01/03 a 05/03/2025
+  - Semana Santa (recesso): 17/04 a 18/04/2025
+  - Dia do Trabalho: 01/05/2025
+  - Corpus Christi (recesso): 19/06 a 20/06/2025
+  - Férias de meio de ano: 14/07 a 28/07/2025
+  
+  ## 2º Semestre
+  - Retorno das aulas: 29/07/2025
+  - Independência do Brasil: 07/09/2025
+  - Nossa Senhora Aparecida: 12/10/2025
+  - Dia do Professor (recesso): 15/10/2025
+  - Finados: 02/11/2025
+  - Proclamação da República: 15/11/2025
+  - Consciência Negra: 20/11/2025
+  - Encerramento das aulas: 12/12/2025
+  - Férias escolares: 15/12/2025 a 02/02/2026
+  
+  ## HORÁRIOS DE FUNCIONAMENTO
+  - Educação Infantil: 7h às 12h (manhã) ou 13h às 18h (tarde)
+  - Ensino Fundamental I (1º ao 5º ano): 7h às 12h (manhã) ou 13h às 18h (tarde)
+  - Ensino Fundamental II (6º ao 9º ano): 7h às 12h30 (manhã) ou 13h às 18h30 (tarde)
+  - Ensino Médio: 7h às 12h30 (manhã)
+  
+  ## HORÁRIO DA SECRETARIA
+  - Segunda a Sexta: 7h às 17h (sem fechar para almoço)
+  - Sábados, domingos e feriados: Fechado
+  
+  ## DOCUMENTOS NECESSÁRIOS PARA MATRÍCULA
+  1. Certidão de nascimento (cópia)
+  2. CPF do aluno
+  3. RG e CPF do responsável
+  4. Comprovante de residência atualizado
+  5. Carteira de vacinação atualizada
+  6. Foto 3x4 recente
+  7. Histórico escolar (para transferências)
+  8. Declaração de transferência (para transferências)
+  
+  ## PRAZOS PARA DOCUMENTOS
+  - Histórico Escolar: 5 dias úteis
+  - Declaração de Matrícula: 3 dias úteis
+  - Certidão de Conclusão: 7 dias úteis
+  - Boletim: 2 dias úteis
+  - Transferência: 3 dias úteis
+  
+  ## INFORMAÇÕES IMPORTANTES
+  - Período de matrícula para novos alunos: Novembro a Janeiro
+  - Período de rematrícula: Outubro a Dezembro
+  - Uniforme escolar: Obrigatório (pode ser adquirido na escola)
+  - Lista de material: Disponível em Janeiro no site e na secretaria
 
-  Trancamento: |
-    O trancamento pode ser solicitado
-    até a 8ª semana do semestre.
-
-  Documentos: |
-    Declarações e históricos são solicitados
-    via protocolo e entregues em até 5 dias úteis.
-
-  Calendário Acadêmico: |
-    O calendário acadêmico está disponível
-    no site oficial da instituição.
+response_format: |
+  Ao responder sobre calendário ou informações:
+  1. Seja claro e objetivo
+  2. Use emojis para destacar datas importantes
+  3. Formate datas de forma legível
+  4. Se a pergunta for sobre data específica, destaque-a
+  5. Ofereça informações adicionais relevantes

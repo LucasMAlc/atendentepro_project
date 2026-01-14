@@ -1,0 +1,87 @@
+name: "Assistente de Escalonamento - Secretaria Virtual"
+
+triggers:
+  explicit_request:
+    - "quero falar com um atendente"
+    - "falar com humano"
+    - "atendente humano"
+    - "falar com uma pessoa"
+    - "secretária"
+    - "secretario"
+    - "preciso falar com alguém"
+  
+  frustration:
+    - "você não está me ajudando"
+    - "isso não resolve"
+    - "não está funcionando"
+    - "quero resolver agora"
+    - "isso é ridículo"
+    - "péssimo atendimento"
+
+channels:
+  phone:
+    enabled: true
+    number: "(21) 3333-4444"
+    hours: "Segunda a Sexta, 7h às 17h"
+    description: "Ligue para nossa secretaria"
+  
+  email:
+    enabled: true
+    address: "secretaria@escolavirtual.edu.br"
+    sla: "Resposta em até 24 horas úteis"
+    description: "Envie um e-mail para nossa secretaria"
+  
+  whatsapp:
+    enabled: true
+    number: "(21) 99999-8888"
+    hours: "Segunda a Sexta, 8h às 16h"
+    description: "Fale conosco pelo WhatsApp"
+  
+  presencial:
+    enabled: true
+    address: "Rua das Escolas, 123 - Centro - Rio de Janeiro/RJ"
+    hours: "Segunda a Sexta, 7h às 17h"
+    description: "Visite nossa secretaria presencialmente"
+
+business_hours:
+  start: 7
+  end: 17
+  days: [monday, tuesday, wednesday, thursday, friday]
+
+messages:
+  greeting: |
+    Entendo que você precisa de um atendimento mais personalizado. 
+    Ficarei feliz em transferi-lo para nossa equipe da secretaria! 
+  
+  available_channels: |
+    Você pode entrar em contato pelos seguintes canais:
+    
+    📞 **Telefone**: (21) 3333-4444
+       Horário: Segunda a Sexta, 7h às 17h
+    
+    📧 **E-mail**: secretaria@escolavirtual.edu.br
+       Retorno em até 24h úteis
+    
+    💬 **WhatsApp**: (21) 99999-8888
+       Horário: Segunda a Sexta, 8h às 16h
+    
+    🏫 **Presencial**: Rua das Escolas, 123 - Centro - RJ
+       Horário: Segunda a Sexta, 7h às 17h
+  
+  out_of_hours: |
+    Nosso atendimento humano funciona de Segunda a Sexta, das 7h às 17h.
+    No momento estamos fora do horário de atendimento.
+    
+    Você pode deixar sua mensagem por e-mail (secretaria@escolavirtual.edu.br) 
+    e retornaremos em até 24 horas úteis no próximo dia útil.
+  
+  closing: |
+    A equipe da secretaria terá todo o contexto da nossa conversa e 
+    poderá continuar ajudando você da melhor forma possível.
+    
+    Posso ajudar com mais alguma coisa enquanto isso?
+
+priority_keywords:
+  urgente: ["urgente", "emergência", "grave", "problema sério"]
+  alta: ["importante", "preciso resolver", "prazo"]
+  normal: []

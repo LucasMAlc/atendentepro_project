@@ -1,18 +1,46 @@
-agent_name: "Flow Acadêmico"
+agent_name: "Assistente de Serviços - Secretaria Virtual"
 
 topics:
-  - id: 1
-    label: "Matrícula"
-    keywords: ["matrícula", "ingresso"]
+  - id: "1"
+    label: "📝 Matrícula de Novo Aluno"
+    keywords: ["matrícula", "matricular", "inscrição", "novo aluno", "cadastro"]
+    description: "Realizar matrícula de novos alunos para o ano letivo"
+    
+  - id: "2"
+    label: "🔒 Trancamento de Matrícula"
+    keywords: ["trancar", "trancamento", "cancelar", "desistir", "parar"]
+    description: "Solicitar trancamento ou cancelamento de matrícula"
+    
+  - id: "3"
+    label: "📄 Solicitação de Documentos"
+    keywords: ["documento", "certidão", "histórico", "declaração", "comprovante", "atestado"]
+    description: "Solicitar documentos escolares (histórico, declaração, etc)"
+    
+  - id: "4"
+    label: "📅 Calendário Escolar"
+    keywords: ["calendário", "datas", "feriados", "período letivo", "férias", "quando"]
+    description: "Consultar datas importantes, feriados e calendário acadêmico"
+    
+  - id: "5"
+    label: "💬 Reclamações e Sugestões"
+    keywords: ["reclamação", "reclamar", "sugestão", "sugerir", "feedback", "melhorar"]
+    description: "Registrar reclamações, sugestões ou feedbacks"
+    
+  - id: "6"
+    label: "👤 Falar com Atendente"
+    keywords: ["atendente", "humano", "pessoa", "secretária", "telefone"]
+    description: "Transferir para atendimento humano na secretaria"
 
-  - id: 2
-    label: "Trancamento"
-    keywords: ["trancar", "trancamento"]
-
-  - id: 3
-    label: "Documentos"
-    keywords: ["histórico", "declaração"]
-
-  - id: 4
-    label: "Calendário Acadêmico"
-    keywords: ["calendário", "datas"]
+greeting: |
+  Olá! Sou a assistente virtual da Secretaria Escolar. 
+  
+  Posso ajudá-lo com os seguintes serviços:
+  
+  📝 Matrícula de Novo Aluno
+  🔒 Trancamento de Matrícula
+  📄 Solicitação de Documentos
+  📅 Calendário Escolar
+  💬 Reclamações e Sugestões
+  👤 Falar com Atendente
+  
+  Como posso ajudá-lo hoje?

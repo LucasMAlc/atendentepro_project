@@ -1,0 +1,126 @@
+name: "Assistente de Feedback - Secretaria Virtual"
+
+protocol_prefix: "SEC"  # Formato: SEC-20250113-ABC123
+
+ticket_types:
+  - name: "duvida"
+    label: "Dúvida"
+    default_priority: "normal"
+    emoji: "❓"
+    
+  - name: "feedback"
+    label: "Feedback"
+    default_priority: "baixa"
+    emoji: "💬"
+    
+  - name: "reclamacao"
+    label: "Reclamação"
+    default_priority: "alta"
+    emoji: "📢"
+    
+  - name: "sugestao"
+    label: "Sugestão"
+    default_priority: "baixa"
+    emoji: "💡"
+    
+  - name: "elogio"
+    label: "Elogio"
+    default_priority: "baixa"
+    emoji: "⭐"
+    
+  - name: "problema"
+    label: "Problema Técnico"
+    default_priority: "alta"
+    emoji: "⚠️"
+
+email:
+  enabled: true
+  brand_color: "#1e40af"  # Azul tema da escola
+  brand_name: "Secretaria Virtual - Escola"
+  sla_message: "Retornaremos em até 24 horas úteis."
+  from_address: "noreply@escolavirtual.edu.br"
+  subject_template: "[{protocol}] {ticket_type} - Secretaria Virtual"
+
+priorities:
+  - name: "baixa"
+    sla_hours: 72
+    description: "Resposta em até 3 dias úteis"
+    
+  - name: "normal"
+    sla_hours: 24
+    description: "Resposta em até 24 horas úteis"
+    
+  - name: "alta"
+    sla_hours: 8
+    description: "Resposta em até 8 horas úteis"
+    
+  - name: "urgente"
+    sla_hours: 2
+    description: "Resposta em até 2 horas úteis"
+
+messages:
+  greeting: |
+    Agradeço por querer compartilhar seu feedback conosco! 
+    Sua opinião é muito importante para melhorarmos nossos serviços.
+  
+  tipo_pergunta: |
+    Que tipo de registro você gostaria de fazer?
+    
+    ❓ Dúvida - Perguntas sobre nossos serviços
+    💬 Feedback - Opinião geral sobre atendimento
+    📢 Reclamação - Insatisfação ou problema ocorrido
+    💡 Sugestão - Ideia para melhorarmos
+    ⭐ Elogio - Reconhecimento de bom atendimento
+    ⚠️ Problema - Bug ou erro técnico
+  
+  coleta_detalhes: |
+    Por favor, descreva em detalhes o que você gostaria de registrar.
+    Quanto mais informações você fornecer, melhor poderemos ajudá-lo.
+  
+  coleta_contato: |
+    Para podermos retornar com uma resposta, precisamos de:
+    
+    1. Seu nome completo
+    2. Melhor e-mail para contato
+    3. Telefone (opcional)
+  
+  confirmacao: |
+    ✅ Seu registro foi criado com sucesso!
+    
+    **Protocolo**: {protocol}
+    **Tipo**: {tipo}
+    **Prioridade**: {prioridade}
+    **Prazo de resposta**: {sla}
+    
+    Você receberá um e-mail de confirmação e nossa equipe entrará em contato conforme o prazo estabelecido.
+    
+    Guarde seu número de protocolo para acompanhamento!
+  
+  agradecimento: |
+    Muito obrigado por entrar em contato! 
+    Sua mensagem foi registrada e será analisada com atenção pela nossa equipe.
+
+categorias_automaticas:
+  professor:
+    keywords: ["professor", "professora", "docente", "aula"]
+    categoria: "Corpo Docente"
+  
+  infraestrutura:
+    keywords: ["sala", "banheiro", "estrutura", "prédio", "instalações"]
+    categoria: "Infraestrutura"
+  
+  alimentacao:
+    keywords: ["merenda", "lanche", "comida", "refeitório"]
+    categoria: "Alimentação"
+  
+  transporte:
+    keywords: ["ônibus", "transporte", "van"]
+    categoria: "Transporte Escolar"
+  
+  secretaria:
+    keywords: ["secretaria", "atendimento", "documento", "matrícula"]
+    categoria: "Secretaria"
+  
+  pedagogico:
+    keywords: ["ensino", "aprendizado", "nota", "prova", "avaliação"]
+    categoria: "Pedagógico"
