@@ -1,0 +1,84 @@
+{% extends 'chat/base.html' %}
+{% load static %}
+
+{% block title %}Início - Secretaria Virtual{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h1>Bem-vindo à Secretaria Virtual</h1>
+        <p class="hero-subtitle">Atendimento inteligente disponível 24 horas por dia</p>
+        <a href="{% url 'chat:chat' %}" class="btn-primary">Iniciar Atendimento</a>
+    </div>
+</div>
+
+<div class="container">
+    <section class="services">
+        <h2>Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Matrícula</h3>
+                <p>Realize a matrícula de novos alunos de forma rápida e prática</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔒</div>
+                <h3>Trancamento</h3>
+                <p>Solicite o trancamento de matrícula quando necessário</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📄</div>
+                <h3>Documentos</h3>
+                <p>Solicite históricos, declarações e outros documentos</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📅</div>
+                <h3>Calendário</h3>
+                <p>Consulte datas importantes e o calendário escolar</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💬</div>
+                <h3>Feedback</h3>
+                <p>Envie reclamações, sugestões e elogios</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">👤</div>
+                <h3>Atendimento Humano</h3>
+                <p>Fale com nossa equipe quando precisar</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>Por que usar nossa assistente virtual?</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">🕐</div>
+                <h3>Disponível 24/7</h3>
+                <p>Atendimento automático a qualquer hora do dia</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Respostas Rápidas</h3>
+                <p>Obtenha informações instantaneamente</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Assistência Inteligente</h3>
+                <p>Direcionamento automático para o serviço correto</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🔒</div>
+                <h3>Seguro</h3>
+                <p>Seus dados protegidos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Pronto para começar?</h2>
+        <p>Nossa assistente virtual está pronta para ajudá-lo</p>
+        <a href="{% url 'chat:chat' %}" class="btn-primary">Conversar Agora</a>
+    </section>
+</div>
+{% endblock %}

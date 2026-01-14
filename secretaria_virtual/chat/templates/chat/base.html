@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Secretaria Virtual{% endblock %}</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'chat/css/style.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="#1e40af"/>
+                    <path d="M16 8L8 14V24H14V18H18V24H24V14L16 8Z" fill="white"/>
+                </svg>
+                <span>Secretaria Virtual</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="{% url 'chat:home' %}">Início</a></li>
+                <li><a href="{% url 'chat:chat' %}" class="nav-chat">Chat</a></li>
+                <li><a href="#" class="nav-disabled">Portal do Aluno</a></li>
+                <li><a href="#" class="nav-disabled">Sobre</a></li>
+                <li><a href="#" class="nav-disabled">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Secretaria Virtual</h3>
+                <p>Atendimento automatizado 24/7</p>
+                <p>Atendimento humano: Seg-Sex, 7h às 17h</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>📞 (21) 3333-4444</p>
+                <p>📧 secretaria@email.com</p>
+                <p>💬 (21) 99999-8888</p>
+            </div>
+            <div class="footer-section">
+                <h3>Endereço</h3>
+                <p>Rua da Escola, 123</p>
+                <p>Centro - Rio de Janeiro/RJ</p>
+                <p>CEP: 20000-000</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Secretaria Virtual.</p>
+        </div>
+    </footer>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
