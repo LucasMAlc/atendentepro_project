@@ -2,45 +2,34 @@ agent_name: "Assistente de Serviços - Secretaria Virtual"
 
 topics:
   - id: "1"
-    label: "📝 Matrícula de Novo Aluno"
-    keywords: ["matrícula", "matricular", "inscrição", "novo aluno", "cadastro"]
-    description: "Realizar matrícula de novos alunos para o ano letivo"
+    label: "📝 Matrícula"
+    keywords: ["matrícula", "matricular", "inscrição", "cadastro"]
     
   - id: "2"
-    label: "🔒 Trancamento de Matrícula"
-    keywords: ["trancar", "trancamento", "cancelar", "desistir", "parar"]
-    description: "Solicitar trancamento ou cancelamento de matrícula"
+    label: "🔒 Trancamento"
+    keywords: ["trancar", "trancamento", "cancelar"]
     
   - id: "3"
-    label: "📄 Solicitação de Documentos"
-    keywords: ["documento", "certidão", "histórico", "declaração", "comprovante", "atestado"]
-    description: "Solicitar documentos escolares (histórico, declaração, etc)"
+    label: "📄 Documentos"
+    keywords: ["documento", "histórico", "declaração"]
     
   - id: "4"
-    label: "📅 Calendário Escolar"
-    keywords: ["calendário", "datas", "feriados", "período letivo", "férias", "quando"]
-    description: "Consultar datas importantes, feriados e calendário acadêmico"
+    label: "📅 Calendário"
+    keywords: ["calendário", "datas", "férias", "quando"]
     
   - id: "5"
-    label: "💬 Reclamações e Sugestões"
-    keywords: ["reclamação", "reclamar", "sugestão", "sugerir", "feedback", "melhorar"]
-    description: "Registrar reclamações, sugestões ou feedbacks"
+    label: "💬 Feedback"
+    keywords: ["reclamação", "sugestão", "feedback"]
     
   - id: "6"
-    label: "👤 Falar com Atendente"
-    keywords: ["atendente", "humano", "pessoa", "secretária", "telefone"]
-    description: "Transferir para atendimento humano na secretaria"
+    label: "👤 Atendente"
+    keywords: ["atendente", "humano", "pessoa"]
 
 greeting: |
-  Olá! Sou a assistente virtual da Secretaria Escolar. 
+  Olá! Sou a assistente da Secretaria Escolar.
   
-  Posso ajudá-lo com os seguintes serviços:
+  Posso ajudar com:
+  📝 Matrícula | 🔒 Trancamento | 📄 Documentos
+  📅 Calendário | 💬 Feedback | 👤 Atendente
   
-  📝 Matrícula de Novo Aluno
-  🔒 Trancamento de Matrícula
-  📄 Solicitação de Documentos
-  📅 Calendário Escolar
-  💬 Reclamações e Sugestões
-  👤 Falar com Atendente
-  
-  Como posso ajudá-lo hoje?
+  Como posso ajudar?

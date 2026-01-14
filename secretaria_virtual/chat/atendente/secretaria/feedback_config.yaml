@@ -1,6 +1,6 @@
 name: "Assistente de Feedback - Secretaria Virtual"
 
-protocol_prefix: "SEC"  # Formato: SEC-20250113-ABC123
+protocol_prefix: "SEC"
 
 ticket_types:
   - name: "duvida"
@@ -29,98 +29,68 @@ ticket_types:
     emoji: "⭐"
     
   - name: "problema"
-    label: "Problema Técnico"
+    label: "Problema"
     default_priority: "alta"
     emoji: "⚠️"
 
 email:
   enabled: true
-  brand_color: "#1e40af"  # Azul tema da escola
-  brand_name: "Secretaria Virtual - Escola"
-  sla_message: "Retornaremos em até 24 horas úteis."
-  from_address: "noreply@escolavirtual.edu.br"
-  subject_template: "[{protocol}] {ticket_type} - Secretaria Virtual"
+  brand_color: "#1e40af"
+  brand_name: "Secretaria Virtual"
+  sla_message: "Retorno em 24h úteis"
 
 priorities:
   - name: "baixa"
     sla_hours: 72
-    description: "Resposta em até 3 dias úteis"
     
   - name: "normal"
     sla_hours: 24
-    description: "Resposta em até 24 horas úteis"
     
   - name: "alta"
     sla_hours: 8
-    description: "Resposta em até 8 horas úteis"
     
   - name: "urgente"
     sla_hours: 2
-    description: "Resposta em até 2 horas úteis"
 
 messages:
   greeting: |
-    Agradeço por querer compartilhar seu feedback conosco! 
-    Sua opinião é muito importante para melhorarmos nossos serviços.
+    Sua opinião é importante para melhorarmos!
   
   tipo_pergunta: |
-    Que tipo de registro você gostaria de fazer?
-    
-    ❓ Dúvida - Perguntas sobre nossos serviços
-    💬 Feedback - Opinião geral sobre atendimento
-    📢 Reclamação - Insatisfação ou problema ocorrido
-    💡 Sugestão - Ideia para melhorarmos
-    ⭐ Elogio - Reconhecimento de bom atendimento
-    ⚠️ Problema - Bug ou erro técnico
+    Tipo de registro:
+    ❓ Dúvida | 💬 Feedback | 📢 Reclamação
+    💡 Sugestão | ⭐ Elogio | ⚠️ Problema
   
   coleta_detalhes: |
-    Por favor, descreva em detalhes o que você gostaria de registrar.
-    Quanto mais informações você fornecer, melhor poderemos ajudá-lo.
+    Descreva em detalhes o que gostaria de registrar.
   
   coleta_contato: |
-    Para podermos retornar com uma resposta, precisamos de:
-    
-    1. Seu nome completo
-    2. Melhor e-mail para contato
+    Para retorno, informe:
+    1. Nome completo
+    2. E-mail
     3. Telefone (opcional)
   
   confirmacao: |
-    ✅ Seu registro foi criado com sucesso!
+    ✅ Registro criado!
     
-    **Protocolo**: {protocol}
-    **Tipo**: {tipo}
-    **Prioridade**: {prioridade}
-    **Prazo de resposta**: {sla}
+    Protocolo: {protocol}
+    Tipo: {tipo}
+    Prazo: {sla}
     
-    Você receberá um e-mail de confirmação e nossa equipe entrará em contato conforme o prazo estabelecido.
-    
-    Guarde seu número de protocolo para acompanhamento!
+    Você receberá e-mail de confirmação.
   
   agradecimento: |
-    Muito obrigado por entrar em contato! 
-    Sua mensagem foi registrada e será analisada com atenção pela nossa equipe.
+    Obrigado! Sua mensagem será analisada pela equipe.
 
 categorias_automaticas:
   professor:
-    keywords: ["professor", "professora", "docente", "aula"]
+    keywords: ["professor", "aula"]
     categoria: "Corpo Docente"
   
   infraestrutura:
-    keywords: ["sala", "banheiro", "estrutura", "prédio", "instalações"]
+    keywords: ["sala", "estrutura"]
     categoria: "Infraestrutura"
   
-  alimentacao:
-    keywords: ["merenda", "lanche", "comida", "refeitório"]
-    categoria: "Alimentação"
-  
-  transporte:
-    keywords: ["ônibus", "transporte", "van"]
-    categoria: "Transporte Escolar"
-  
   secretaria:
-    keywords: ["secretaria", "atendimento", "documento", "matrícula"]
+    keywords: ["secretaria", "documento"]
     categoria: "Secretaria"
-  
-  pedagogico:
-    keywords: ["ensino", "aprendizado", "nota", "prova", "avaliação"]
-    categoria: "Pedagógico"

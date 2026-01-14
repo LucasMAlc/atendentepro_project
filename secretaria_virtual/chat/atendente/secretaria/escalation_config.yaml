@@ -2,46 +2,36 @@ name: "Assistente de Escalonamento - Secretaria Virtual"
 
 triggers:
   explicit_request:
-    - "quero falar com um atendente"
-    - "falar com humano"
-    - "atendente humano"
-    - "falar com uma pessoa"
+    - "falar com atendente"
+    - "humano"
+    - "pessoa"
     - "secretária"
-    - "secretario"
-    - "preciso falar com alguém"
   
   frustration:
-    - "você não está me ajudando"
-    - "isso não resolve"
-    - "não está funcionando"
-    - "quero resolver agora"
-    - "isso é ridículo"
-    - "péssimo atendimento"
+    - "não ajuda"
+    - "não resolve"
+    - "péssimo"
 
 channels:
   phone:
     enabled: true
     number: "(21) 3333-4444"
-    hours: "Segunda a Sexta, 7h às 17h"
-    description: "Ligue para nossa secretaria"
+    hours: "Seg-Sex, 7-17h"
   
   email:
     enabled: true
     address: "secretaria@escolavirtual.edu.br"
-    sla: "Resposta em até 24 horas úteis"
-    description: "Envie um e-mail para nossa secretaria"
+    sla: "24h úteis"
   
   whatsapp:
     enabled: true
     number: "(21) 99999-8888"
-    hours: "Segunda a Sexta, 8h às 16h"
-    description: "Fale conosco pelo WhatsApp"
+    hours: "Seg-Sex, 8-16h"
   
   presencial:
     enabled: true
-    address: "Rua das Escolas, 123 - Centro - Rio de Janeiro/RJ"
-    hours: "Segunda a Sexta, 7h às 17h"
-    description: "Visite nossa secretaria presencialmente"
+    address: "Rua das Escolas, 123 - Centro - RJ"
+    hours: "Seg-Sex, 7-17h"
 
 business_hours:
   start: 7
@@ -50,38 +40,24 @@ business_hours:
 
 messages:
   greeting: |
-    Entendo que você precisa de um atendimento mais personalizado. 
-    Ficarei feliz em transferi-lo para nossa equipe da secretaria! 
+    Entendo que precisa de atendimento personalizado.
   
   available_channels: |
-    Você pode entrar em contato pelos seguintes canais:
+    Canais disponíveis:
     
-    📞 **Telefone**: (21) 3333-4444
-       Horário: Segunda a Sexta, 7h às 17h
-    
-    📧 **E-mail**: secretaria@escolavirtual.edu.br
-       Retorno em até 24h úteis
-    
-    💬 **WhatsApp**: (21) 99999-8888
-       Horário: Segunda a Sexta, 8h às 16h
-    
-    🏫 **Presencial**: Rua das Escolas, 123 - Centro - RJ
-       Horário: Segunda a Sexta, 7h às 17h
+    📞 (21) 3333-4444 | Seg-Sex, 7-17h
+    📧 secretaria@escolavirtual.edu.br | 24h úteis
+    💬 (21) 99999-8888 | Seg-Sex, 8-16h
+    🏫 Rua das Escolas, 123 | Seg-Sex, 7-17h
   
   out_of_hours: |
-    Nosso atendimento humano funciona de Segunda a Sexta, das 7h às 17h.
-    No momento estamos fora do horário de atendimento.
-    
-    Você pode deixar sua mensagem por e-mail (secretaria@escolavirtual.edu.br) 
-    e retornaremos em até 24 horas úteis no próximo dia útil.
+    Horário: Seg-Sex, 7-17h.
+    Envie e-mail: secretaria@escolavirtual.edu.br
+    Retorno: 24h úteis no próximo dia útil.
   
   closing: |
-    A equipe da secretaria terá todo o contexto da nossa conversa e 
-    poderá continuar ajudando você da melhor forma possível.
-    
-    Posso ajudar com mais alguma coisa enquanto isso?
+    A equipe terá o contexto da conversa para continuar ajudando.
 
 priority_keywords:
-  urgente: ["urgente", "emergência", "grave", "problema sério"]
-  alta: ["importante", "preciso resolver", "prazo"]
-  normal: []
+  urgente: ["urgente", "emergência"]
+  alta: ["importante", "prazo"]
