@@ -49,7 +49,6 @@ class AtendenteService:
             network = create_standard_network(
                 templates_root=templates_root,
                 client="",
-                global_single_reply=True,
                 include_knowledge=False,
                 include_confirmation=False,
                 include_usage=False,
