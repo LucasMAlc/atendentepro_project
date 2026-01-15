@@ -1,65 +1,35 @@
-agent_name: "Assistente de Triagem - Secretaria Virtual"
+agent_name: "Triage Agent"
+
+instructions: |
+  Você é um agente de TRIAGEM. Sua função é direcionar as solicitações dos usuários para o agente mais adequado com base no conteúdo da mensagem.
+
+routes:
+  - agent: "Answer Agent"
+    when:
+      - "inicio das aulas"
+      - "início das aulas"
+      - "quando começam as aulas"
+      - "quando inicia"
+      - "data de inicio"
+      - "calendário"
+      - "férias"
+      - "horário"
+      - "prazo"
 
 keywords:
   Flow Agent:
     - "serviços"
-    - "opções"
     - "menu"
-    - "o que pode fazer"
     - "ajuda"
-    - "não sei"
-  
+
   Interview Agent:
     - "matrícula"
-    - "matricular"
-    - "inscrição"
-    - "cadastro"
-    - "novo aluno"
-    - "trancar"
-    - "trancamento"
-    - "cancelar matrícula"
-    - "desistir"
     - "documentos"
-    - "certidão"
-    - "histórico"
-    - "declaração"
-    - "comprovante"
-    - "atestado"
-  
-  Answer Agent:
-    - "calendário"
-    - "datas"
-    - "feriados"
-    - "período letivo"
-    - "férias"
-    - "quando"
-    - "horário"
-    - "prazo"
-    - "quando começam"
-    - "inicio das aulas"
-    - "começa as aulas"
-    - "quando inicia"
-    - "data de inicio"
-  
+
   Escalation Agent:
-    - "falar com atendente"
     - "humano"
-    - "pessoa"
-    - "secretária"
-    - "secretario"
     - "telefone"
-    - "urgente"
-    - "não resolve"
-    - "não ajuda"
-  
+
   Feedback Agent:
     - "reclamação"
-    - "reclamar"
-    - "insatisfeito"
-    - "problema"
-    - "sugestão"
-    - "sugerir"
-    - "melhorar"
     - "feedback"
-    - "crítica"
-    - "elogio"

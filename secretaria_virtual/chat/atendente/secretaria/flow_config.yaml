@@ -1,35 +1,26 @@
-agent_name: "Assistente de Serviços - Secretaria Virtual"
+agent_name: Flow Agent
 
 topics:
   - id: "1"
-    label: "📝 Matrícula"
+    label: "Matrícula"
     keywords: ["matrícula", "matricular", "inscrição", "cadastro"]
     
   - id: "2"
-    label: "🔒 Trancamento"
+    label: "Trancamento"
     keywords: ["trancar", "trancamento", "cancelar"]
     
   - id: "3"
-    label: "📄 Documentos"
+    label: "Documentos"
     keywords: ["documento", "histórico", "declaração"]
     
   - id: "4"
-    label: "📅 Calendário"
+    label: "Calendário"
     keywords: ["calendário", "datas", "férias", "quando"]
     
   - id: "5"
-    label: "💬 Feedback"
+    label: "Feedback"
     keywords: ["reclamação", "sugestão", "feedback"]
     
   - id: "6"
-    label: "👤 Atendente"
+    label: "Atendente"
     keywords: ["atendente", "humano", "pessoa"]
-
-greeting: |
-  Olá! Sou a assistente da Secretaria Escolar.
-  
-  Posso ajudar com:
-  📝 Matrícula | 🔒 Trancamento | 📄 Documentos
-  📅 Calendário | 💬 Feedback | 👤 Atendente
-  
-  Como posso ajudar?

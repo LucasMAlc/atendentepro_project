@@ -1,11 +1,10 @@
-name: "Assistente de Escalonamento - Secretaria Virtual"
+name: "Escalation Agent"
 
 triggers:
   explicit_request:
     - "falar com atendente"
     - "humano"
     - "pessoa"
-    - "secretária"
   
   frustration:
     - "não ajuda"
@@ -20,7 +19,7 @@ channels:
   
   email:
     enabled: true
-    address: "secretaria@escolavirtual.edu.br"
+    address: "secretaria@email.com"
     sla: "24h úteis"
   
   whatsapp:
@@ -30,7 +29,7 @@ channels:
   
   presencial:
     enabled: true
-    address: "Rua das Escolas, 123 - Centro - RJ"
+    address: "Rua da Escola, 123 - Centro - RJ"
     hours: "Seg-Sex, 7-17h"
 
 business_hours:
@@ -46,18 +45,14 @@ messages:
     Canais disponíveis:
     
     📞 (21) 3333-4444 | Seg-Sex, 7-17h
-    📧 secretaria@escolavirtual.edu.br | 24h úteis
+    📧 secretaria@email.com | 24h úteis
     💬 (21) 99999-8888 | Seg-Sex, 8-16h
-    🏫 Rua das Escolas, 123 | Seg-Sex, 7-17h
+    🏫 Rua da Escola, 123 | Seg-Sex, 7-17h
   
   out_of_hours: |
     Horário: Seg-Sex, 7-17h.
-    Envie e-mail: secretaria@escolavirtual.edu.br
+    Envie e-mail: secretaria@email.com
     Retorno: 24h úteis no próximo dia útil.
   
   closing: |
     A equipe terá o contexto da conversa para continuar ajudando.
-
-priority_keywords:
-  urgente: ["urgente", "emergência"]
-  alta: ["importante", "prazo"]

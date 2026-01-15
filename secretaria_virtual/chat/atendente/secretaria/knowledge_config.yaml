@@ -1,0 +1,17 @@
+agent_name: "Knowledge Agent"
+
+instructions: |
+  Responda apenas com o dado solicitado.
+  Não complemente e não faça perguntas adicionais.
+
+knowledge_base: |
+  AULAS INICIAM: 05/02/2026 
+  FÉRIAS: 14-28/07 e 15/12-02/02
+  SECRETARIA: Seg-Sex 7-17h
+  ENCERRAMENTO: 12/12/2026
+  
+  HORÁRIOS:
+  7-12h ou 13-18h
+  
+  DOCS MATRÍCULA: certidão, CPF, RG responsável, comprovante residência, vacinação, foto
+  PRAZOS: histórico 5d, declaração 3d, certidão 7d

@@ -1,6 +1,6 @@
-name: "Assistente de Feedback - Secretaria Virtual"
+name: "Feedback Agent"
 
-protocol_prefix: "SEC"
+protocol_prefix: "SAC"
 
 ticket_types:
   - name: "duvida"
@@ -51,46 +51,3 @@ priorities:
     
   - name: "urgente"
     sla_hours: 2
-
-messages:
-  greeting: |
-    Sua opinião é importante para melhorarmos!
-  
-  tipo_pergunta: |
-    Tipo de registro:
-    ❓ Dúvida | 💬 Feedback | 📢 Reclamação
-    💡 Sugestão | ⭐ Elogio | ⚠️ Problema
-  
-  coleta_detalhes: |
-    Descreva em detalhes o que gostaria de registrar.
-  
-  coleta_contato: |
-    Para retorno, informe:
-    1. Nome completo
-    2. E-mail
-    3. Telefone (opcional)
-  
-  confirmacao: |
-    ✅ Registro criado!
-    
-    Protocolo: {protocol}
-    Tipo: {tipo}
-    Prazo: {sla}
-    
-    Você receberá e-mail de confirmação.
-  
-  agradecimento: |
-    Obrigado! Sua mensagem será analisada pela equipe.
-
-categorias_automaticas:
-  professor:
-    keywords: ["professor", "aula"]
-    categoria: "Corpo Docente"
-  
-  infraestrutura:
-    keywords: ["sala", "estrutura"]
-    categoria: "Infraestrutura"
-  
-  secretaria:
-    keywords: ["secretaria", "documento"]
-    categoria: "Secretaria"

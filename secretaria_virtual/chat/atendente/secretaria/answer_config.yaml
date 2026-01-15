@@ -1,23 +1,6 @@
-agent_name: "Answer Agent"
+agente_name: "Answer Agent"
+description: "DEFAULT: Fornece respostas diretas."
+
 
 instructions: |
-  RESPONDA DIRETO. NÃO PERGUNTE NADA.
-  
-  "Quando começam as aulas?" = "05/02/2026 📅"
-  "Férias?" = "Meio de ano: 14-28/07. Fim de ano: 15/12-02/02"
-  "Horário secretaria?" = "Seg-Sex 7-17h"
-
-knowledge_base: |
-  AULAS INICIAM: 05/02/2026 (todas turmas)
-  FÉRIAS: 14-28/07 (meio) | 15/12-02/02 (fim)
-  SECRETARIA: Seg-Sex 7-17h
-  ENCERRAMENTO: 12/12/2026
-  
-  HORÁRIOS:
-  Infantil: 7-12h ou 13-18h
-  Fund I: 7-12h ou 13-18h  
-  Fund II: 7-12h30 ou 13-18h30
-  Médio: 7-12h30
-  
-  DOCS MATRÍCULA: certidão, CPF, RG responsável, comprovante residência, vacinação, foto
-  PRAZOS: histórico 5d, declaração 3d, certidão 7d
+  Você é um agente especializado em fornecer respostas diretas.

@@ -1,4 +1,4 @@
-agent_name: "Assistente de Coleta - Secretaria Virtual"
+agent_name: "Interview Agent"
 
 interview_questions: |
   Colete informações de forma educada, uma pergunta por vez.
