@@ -2,7 +2,8 @@ import asyncio
 import os
 from pathlib import Path
 from typing import Dict, List, Optional
-from atendentepro import activate, create_standard_network, AgentStyle
+from unittest import result
+from atendentepro import activate, create_standard_network, AgentStyle, configure
 from agents import Runner
 
 
@@ -30,35 +31,43 @@ class AtendenteService:
             
             # Estilo global
             global_style = AgentStyle(
-                tone="profissional, acolhedor e educado",
-                language_style="formal",
-                response_length="moderado",
-                custom_rules="Use linguagem clara, seja empático e confirme informações importantes.",
+                tone="profissional e educado",
+                language_style="neutro",
+                response_length="conciso",
+                custom_rules="Use linguagem clara e seja empático.",
             )
-            
+
+            # Configurar modelo padrão
+            configure(
+                default_model="gpt-4o-mini"
+            )
+
             # Criar rede de agentes
             # A pasta dos YAMLs é: chat/atendente/secretaria/
             templates_root = Path(__file__).parent.parent / "atendente" / "secretaria"
             
             network = create_standard_network(
                 templates_root=templates_root,
-                client="secretaria",  # Os YAMLs estão direto na pasta
-                include_knowledge=False,  # Não usaremos Knowledge Agent
-                include_confirmation=False,  # Não precisamos de confirmação separada
-                include_usage=False,  # Não teremos usage específico
-                include_onboarding=False,  # Não precisamos de onboarding
+                client="",
+                global_single_reply=True,
+                include_knowledge=False,
+                include_confirmation=False,
+                include_usage=False,
+                include_onboarding=False,
                 include_escalation=True,
                 include_feedback=True,
                 global_style=global_style,
             )
+
+            print(f"🤖 Agentes disponíveis: {dir(network)}")
             
             AtendenteService._network = network
             AtendenteService._initialized = True
             
-            print("✅ AtendentePro inicializado com sucesso!")
+            print("AtendentePro inicializado com sucesso!")
             
         except Exception as e:
-            print(f"❌ Erro ao inicializar AtendentePro: {str(e)}")
+            print(f"Erro ao inicializar AtendentePro: {str(e)}")
             raise
     
     async def process_message(self, message: str, conversation_history: list = None) -> dict:
@@ -87,6 +96,8 @@ class AtendenteService:
                 AtendenteService._network.triage,
                 messages
             )
+
+            print(f"Agente usado: {result}")
             
             # Extrai a resposta corretamente
             response_text = result.final_output if hasattr(result, 'final_output') else str(result)
@@ -100,7 +111,7 @@ class AtendenteService:
         except Exception as e:
             import traceback
             error_details = traceback.format_exc()
-            print(f"❌ Erro ao processar mensagem: {str(e)}")
+            print(f"Erro ao processar mensagem: {str(e)}")
             print(f"Detalhes: {error_details}")
             return {
                 "error": str(e),
