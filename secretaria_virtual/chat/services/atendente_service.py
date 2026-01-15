@@ -59,7 +59,7 @@ class AtendenteService:
                 global_style=global_style,
             )
 
-            print(f"🤖 Agentes disponíveis: {dir(network)}")
+            print(f"Agentes disponíveis: {dir(network)}")
             
             AtendenteService._network = network
             AtendenteService._initialized = True

@@ -58,7 +58,7 @@ def send_message(request):
             'content': result['response']
         })
         
-        # Limita histórico a últimas 20 mensagens para não sobrecarregar
+        # Limita histórico a últimas 10 mensagens para não sobrecarregar
         if len(conversation_history) > 10:
             conversation_history = conversation_history[-10:]
         
