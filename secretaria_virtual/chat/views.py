@@ -36,8 +36,8 @@ def send_message(request):
         conversation_history = request.session.get('conversation_history', [])
         
         # Debug
-        print(f"📩 Mensagem recebida: {user_message}")
-        print(f"📜 Histórico: {len(conversation_history)} mensagens")
+        print(f"Mensagem recebida: {user_message}")
+        print(f"Histórico: {len(conversation_history)} mensagens")
         
         # Processa a mensagem
         service = AtendenteService()
@@ -65,7 +65,7 @@ def send_message(request):
         request.session['conversation_history'] = conversation_history
         request.session.modified = True
         
-        print(f"✅ Resposta enviada: {result['response'][:100]}...")
+        print(f"Resposta enviada: {result['response'][:100]}...")
         
         return JsonResponse({
             'response': result['response'],
@@ -79,7 +79,7 @@ def send_message(request):
     except Exception as e:
         import traceback
         error_trace = traceback.format_exc()
-        print(f"❌ Erro na view: {str(e)}")
+        print(f"Erro na view: {str(e)}")
         print(f"Traceback: {error_trace}")
         return JsonResponse({
             'error': f'Erro ao processar mensagem: {str(e)}'
@@ -95,7 +95,7 @@ def clear_conversation(request):
     try:
         request.session['conversation_history'] = []
         request.session.modified = True
-        print("🗑️ Conversa limpa")
+        print("Conversa limpa")
         return JsonResponse({
             'status': 'success',
             'message': 'Conversa limpa'
