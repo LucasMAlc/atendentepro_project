@@ -2,6 +2,15 @@
 
 Sistema de atendimento automatizado para secretaria escolar usando Django e AtendentePro.
 
+## 💡 Sobre o Projeto
+
+Este projeto foi desenvolvido para demonstrar conhecimento prático em orquestração de agentes de IA usando AtendentePro
+
+## 📸 Demonstração
+
+![Home](docs/home.png)
+![Chat](docs/chat.png)
+
 ## 🚀 Pré-requisitos
 
 - Python 3.9+
@@ -58,6 +67,20 @@ python manage.py runserver
 ```
 
 Acesse: http://localhost:8000
+
+## 🐳 Docker (Opcional)
+
+### Desenvolvimento
+```bash
+docker-compose up
+```
+
+Acesse: http://localhost:8000
+
+### Produção
+```bash
+docker-compose -f docker-compose.prod.yml up -d
+```
 
 ## 🔑 Obtendo as Chaves
 
