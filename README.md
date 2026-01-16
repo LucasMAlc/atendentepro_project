@@ -4,7 +4,8 @@ Sistema de atendimento automatizado para secretaria escolar usando Django e Aten
 
 ## 💡 Sobre o Projeto
 
-Este projeto foi desenvolvido para demonstrar conhecimento prático em orquestração de agentes de IA usando AtendentePro
+Este projeto foi desenvolvido para demonstrar conhecimento prático em orquestração de agentes de IA usando AtendentePro.
+Logo, seu foco está nos arquivos .yaml e no atendente_service.py
 
 ## 📸 Demonstração
 
